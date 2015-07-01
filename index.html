@@ -5,8 +5,9 @@ Daan Rijpkema
 MIT License
  -->
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app>
 <head>
+ 	<meta charset="utf-8">
 	<title>Scribble</title>
  	<style type="text/css">
  	#input {
@@ -15,6 +16,8 @@ MIT License
  		min-width: 90%; min-height: 90%;
  	}
  	</style>
+ 	<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+ 	<script type="text/javascript" src="js/scribble.js"></script>
  	<script type="text/javascript">
  	var commands = ["new document"];
 
@@ -23,13 +26,16 @@ MIT License
  	// todo: build command execution
  	// todo: build storage and quicksaving
  	// todo: build key recognition (tab and (shift)enter and other hotkeys
-
+	// todo: add bootstrap
 
  	</script>
 </head>
 <body>
-
-	<textarea id="input" rows="50" placeholder="Hey there, this is Scribble. What do you want to do? (hint: new document)"></textarea>
-
+	<div class="col-lg-8">
+		<textarea id="input" rows="50" placeholder="Hey there, this is Scribble. What do you want to do? (hint: new document)"></textarea>
+	</div>
+	<div class="col-lg-8">
+		<span id="console">&nbsp;</span>
+	</div>
 </body>
 </html>
